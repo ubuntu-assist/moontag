@@ -1,0 +1,266 @@
+{
+  "Home": {
+    "hero": {
+      "title": "Pour Des Moments De Qualité, Offrez Des <highlight>Gift Cards!</highlight>",
+      "subtitle": "Moontag permet des transactions fluides avec la cryptomonnaie pour les gift cards, les recharges mobiles et les paiements de factures à travers l'Afrique francophone.",
+      "cta": {
+        "buy_now": "Acheter maintenant",
+        "join_waitlist": "Rejoindre la liste"
+      }
+    },
+    "features": {
+      "title": "Pourquoi Choisir Moontag ?",
+      "seamless_crypto_payments": {
+        "title": "Paiements Crypto Fluides",
+        "description": "Utilisez votre cryptomonnaie pour des achats quotidiens sans les contraintes de l'infrastructure bancaire traditionnelle."
+      },
+      "gift_cards_marketplace": {
+        "title": "Marché des Cartes Cadeaux",
+        "description": "Parcourez et achetez des cartes cadeaux pour des marques locales et mondiales en utilisant votre solde en cryptomonnaie."
+      },
+      "mobile_topups": {
+        "title": "Recharges Mobiles",
+        "description": "Rechargez du crédit et des données pour n'importe quel opérateur mobile directement avec de la cryptomonnaie."
+      }
+    }
+  },
+  "HowItWorks": {
+    "title": "Comment Moontag Fonctionne",
+    "subtitle": "Utiliser la cryptomonnaie pour les achats quotidiens n'a jamais été aussi simple. Suivez ces étapes simples pour commencer avec Moontag.",
+    "steps": {
+      "create_account": {
+        "title": "Créer un Compte",
+        "description": "Inscrivez-vous pour un compte Moontag en quelques minutes avec votre adresse e-mail et votre numéro de téléphone."
+      },
+      "connect_wallet": {
+        "title": "Connecter un Portefeuille",
+        "description": "Associez votre portefeuille crypto existant ou créez-en un nouveau directement sur la plateforme."
+      },
+      "explore_marketplace": {
+        "title": "Explorer le Marketplace",
+        "description": "Découvrez notre large sélection de cartes cadeaux, recharges mobiles et options de paiement de factures."
+      },
+      "complete_purchase": {
+        "title": "Finaliser l'Achat",
+        "description": "Payez avec de la cryptomonnaie et recevez votre carte cadeau numérique ou confirmation instantanément."
+      }
+    }
+  },
+  "FeatureHighlight": {
+    "title": "Gérez Tout Depuis Votre Téléphone",
+    "subtitle": "L'application mobile Moontag met la puissance de la cryptomonnaie à portée de main. Achetez des cartes cadeaux, rechargez votre mobile et payez vos factures en déplacement.",
+    "features": {
+      "intuitive_interface": {
+        "title": "Interface Intuitive",
+        "description": "Une navigation facile et un design moderne rendent l'achat de cartes cadeaux simple et agréable."
+      },
+      "offline_mode": {
+        "title": "Mode Hors Connexion",
+        "description": "Consultez vos cartes cadeaux achetées même sans connexion internet, idéal pour les zones à faible connectivité."
+      },
+      "real_time_notifications": {
+        "title": "Notifications en Temps Réel",
+        "description": "Recevez des mises à jour instantanées sur vos transactions, offres spéciales et promotions de cartes cadeaux."
+      }
+    }
+  },
+  "CryptoIntegration": {
+    "title": "Propulsé par la Blockchain Stellar",
+    "subtitle": "Moontag exploite la blockchain Stellar pour des transactions en cryptomonnaie rapides, sécurisées et abordables. Notre plateforme rend la technologie blockchain accessible à tous.",
+    "cards": {
+      "secure_transactions": {
+        "title": "Transactions Sécurisées",
+        "description": "Chaque transaction sur Moontag est chiffrée et protégée par la technologie de registre distribué de Stellar, garantissant que vos fonds sont toujours en sécurité."
+      },
+      "ultra_fast": {
+        "title": "Ultra Rapide",
+        "description": "Le réseau Stellar confirme les transactions en quelques secondes, et non en minutes ou heures, vous donnant un accès immédiat à vos cartes cadeaux et services achetés."
+      },
+      "low_fees": {
+        "title": "Frais de Transaction Minimes",
+        "description": "Avec des frais de transaction inférieurs à 0,01 $, Stellar permet à Moontag de proposer des conversions crypto-vers-cartes cadeaux abordables à travers l'Afrique francophone."
+      }
+    },
+    "multi_currency": {
+      "title": "Prise en Charge de Plusieurs Cryptomonnaies",
+      "description": "Bien que basé sur Stellar, Moontag prend en charge plusieurs cryptomonnaies, y compris XLM, BTC, ETH et divers stablecoins, pour vous offrir une flexibilité maximale."
+    }
+  },
+  "CTASection": {
+    "title": "Prêt à Utiliser Votre Crypto pour les Achats Quotidiens ?",
+    "subtitle": "Rejoignez des milliers d'utilisateurs à travers l'Afrique francophone qui utilisent déjà Moontag pour combler le fossé entre la cryptomonnaie et les dépenses quotidiennes.",
+    "cta_buttons": {
+      "start_now": "Commencer Maintenant",
+      "contact_sales": "Contacter les Ventes"
+    },
+    "newsletter": {
+      "title": "Inscription à la Newsletter",
+      "description": "Restez informé des dernières offres de cartes cadeaux, promotions et actualités sur la cryptomonnaie directement dans votre boîte de réception.",
+      "success_message": "Merci pour votre inscription ! Vous recevrez bientôt nos dernières actualités.",
+      "form": {
+        "name_placeholder": "Votre Nom",
+        "email_placeholder": "Votre Email",
+        "submit_button": "S'abonner",
+        "submitting": "Envoi en cours..."
+      },
+      "agreement": "En vous abonnant, vous acceptez notre Politique de Confidentialité et nos Conditions d'Utilisation.",
+      "validation": {
+        "name_required": "Le nom doit contenir au moins 2 caractères",
+        "email_required": "L'email est requis",
+        "email_invalid": "Veuillez entrer une adresse email valide"
+      }
+    }
+  },
+  "Navbar": {
+    "links": {
+      "marketplace": "Marketplace",
+      "services": "Nos Services",
+      "about": "À Propos",
+      "partners": "Partenaires"
+    },
+    "login": "Connexion"
+  },
+  "Footer": {
+    "description": "Moontag est une plateforme de cartes cadeaux basée sur la cryptomonnaie, conçue pour permettre des transactions fluides, abordables et sécurisées en Afrique francophone.",
+    "company": {
+      "title": "Entreprise",
+      "about": "À Propos",
+      "careers": "Carrières",
+      "blog": "Blog"
+    },
+    "help": {
+      "title": "Aide",
+      "contact": "Contact",
+      "privacy_policy": "Politique de Confidentialité",
+      "terms_of_use": "Conditions d’Utilisation"
+    },
+    "copyright": "© {year} Moontag. Tous droits réservés."
+  },
+  "GiftCardCarousel": {
+    "title": "Gift Cards Populaires",
+    "gift_cards": [
+      {
+        "id": "orange-01",
+        "name": "Carte de Rechargement Orange",
+        "merchant": "Orange",
+        "description": "Rechargez votre compte Orange avec des cryptomonnaies en toute simplicité et rapidité.",
+        "alt": "Carte Orange"
+      },
+      {
+        "id": "mtn-01",
+        "name": "Carte de Rechargement MTN",
+        "merchant": "MTN",
+        "description": "Utilisez des cryptomonnaies pour recharger votre compte MTN, disponible partout en Afrique.",
+        "alt": "Carte MTN"
+      },
+      {
+        "id": "Moontag-gift-01",
+        "name": "Carte Cadeau Moontag",
+        "merchant": "Moontag",
+        "description": "Offrez une carte cadeau Moontag à vos proches pour une expérience d'achat unique avec crypto.",
+        "alt": "Carte Cadeau Moontag"
+      },
+      {
+        "id": "Moontag-gift-02",
+        "name": "Carte Cadeau Moontag",
+        "merchant": "Moontag",
+        "description": "Offrez une carte cadeau Moontag à vos proches pour une expérience d'achat unique avec crypto.",
+        "alt": "Carte Cadeau Moontag"
+      }
+    ]
+  },
+  "ServicesPage": {
+    "hero": {
+      "title": "Nos Services",
+      "description": "Moontag propose une suite complète de services qui vous permettent d’utiliser la cryptomonnaie pour les achats et paiements quotidiens à travers l’Afrique francophone."
+    },
+    "overview": {
+      "title": "Ce Que Nous Offrons",
+      "description": "Notre plateforme comble le fossé entre la cryptomonnaie et les dépenses quotidiennes"
+    },
+    "services": [
+      {
+        "id": "gift-cards",
+        "title": "Marketplace des Gift Cards",
+        "description": "Achetez des gift cards numériques de marques populaires avec de la cryptomonnaie. Envoyez-les à vos amis et votre famille ou utilisez-les pour vos achats en ligne.",
+        "features": [
+          "Large sélection de marques locales et internationales",
+          "Livraison instantanée dans votre portefeuille Moontag",
+          "Réductions spéciales sur certaines gift cards",
+          "Partagez des gift cards avec vos proches",
+          "Suivez vos achats et l’utilisation de vos gift cards"
+        ],
+        "callToAction": "Parcourir les Gift Cards",
+        "link": "/gift-cards"
+      },
+      {
+        "id": "mobile-topup",
+        "title": "Recharge Mobile",
+        "description": "Rechargez du crédit ou des données pour tout opérateur mobile avec de la cryptomonnaie. Une recharge simple, rapide et sécurisée pour vous et vos proches.",
+        "features": [
+          "Support pour tous les principaux opérateurs en Afrique francophone",
+          "Traitement instantané des recharges",
+          "Planifiez des recharges récurrentes",
+          "Envoyez du crédit à vos amis et votre famille",
+          "Tarifs compétitifs sans frais cachés"
+        ],
+        "callToAction": "Recharger Maintenant",
+        "link": "/mobile"
+      },
+      {
+        "id": "utility-payments",
+        "title": "Paiements de Factures",
+        "description": "Payez vos factures de services publics avec de la cryptomonnaie. Électricité, eau, internet et plus encore, tout géré depuis un seul endroit avec confirmation instantanée.",
+        "features": [
+          "Payez les factures d’électricité, d’eau et d’internet",
+          "Paiements en un clic pour les bénéficiaires enregistrés",
+          "Rappels de paiement automatiques",
+          "Reçus numériques pour toutes les transactions",
+          "Suivez l’historique des paiements et les factures à venir"
+        ],
+        "callToAction": "Payer les Factures",
+        "link": "/utilities"
+      },
+      {
+        "id": "crypto-wallet",
+        "title": "Portefeuille de Cryptomonnaie",
+        "description": "Gérez vos cryptomonnaies en toute sécurité avec notre portefeuille intuitif. Envoyez, recevez et échangez des actifs numériques facilement tout en gardant le contrôle total.",
+        "features": [
+          "Support pour plusieurs cryptomonnaies",
+          "Portefeuille non-custodial pour un contrôle total par l’utilisateur",
+          "Options de sauvegarde et de récupération sécurisées",
+          "Suivez les performances de votre portefeuille",
+          "Échangez entre différentes cryptomonnaies"
+        ],
+        "callToAction": "Gérer le Portefeuille",
+        "link": "/wallet"
+      }
+    ],
+    "benefits": {
+      "title": "Pourquoi Choisir Moontag",
+      "description": "Nous nous engageons à offrir une expérience fluide et sécurisée",
+      "items": [
+        {
+          "title": "Transactions Sécurisées",
+          "description": "Toutes les transactions sont chiffrées et protégées par la technologie blockchain Stellar, garantissant la sécurité de vos fonds et informations personnelles."
+        },
+        {
+          "title": "Traitement Rapide",
+          "description": "Profitez de confirmations de transactions quasi instantanées, vous permettant d’utiliser vos gift cards, recharges mobiles et de payer vos factures sans délai."
+        },
+        {
+          "title": "Focus Régional",
+          "description": "Conçu spécifiquement pour l’Afrique francophone, nos services répondent aux besoins locaux avec un support pour les opérateurs, commerçants et fournisseurs de services régionaux."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à Commencer ?",
+      "description": "Rejoignez des milliers d’utilisateurs à travers l’Afrique francophone qui utilisent Moontag pour combler le fossé entre la cryptomonnaie et les dépenses quotidiennes.",
+      "buttons": {
+        "create_account": "Créer un Compte",
+        "contact_sales": "Contacter les Ventes"
+      }
+    }
+  }
+}
