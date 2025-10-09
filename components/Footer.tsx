@@ -1,206 +1,167 @@
 'use client'
-import React, { FormEvent, useRef } from 'react'
-import { motion, useInView, Variants } from 'framer-motion'
+import React, { FormEvent } from 'react'
 import Link from 'next/link'
-import LanguageSelector from './LanguageSelector'
-
-const pathArr = [
-  'M55.7447 0H15.3191L0 45.5836H18.2979L4.25532 81.7065H16.5957L5.95745 126L34.4681 82.9966L45.9574 126H120V0H104.681L104.255 110.519H58.2979L45.9574 64.5051H28.0851L42.9787 39.1331L61.7021 106.648H99.5745V0H80V94.6075H76.1702L55.7447 0Z',
-  'M167.002 107.746C175.137 107.746 182.109 104.758 186.426 97.4531H207.178C200.371 114.719 186.592 125.676 167.666 125.676C143.594 125.676 124.834 106.916 124.834 82.8438C124.834 59.6016 143.262 39.5137 166.836 39.5137C192.402 39.5137 210 59.9336 210 84.6699C210 85.998 209.834 87.3262 209.834 88.6543H144.424C145.752 101.271 154.717 107.746 167.002 107.746ZM166.836 57.1113C156.543 57.1113 147.744 63.4199 145.088 73.5469H189.414C186.094 62.4238 178.291 57.1113 166.836 57.1113Z',
-  'M244.512 60.2656L261.5 41L294 0V32L255.137 78.6934L291.494 125.344C291.494 125.51 291.66 125.51 291.66 125.676L291.826 125.842H266.758C266.758 125.842 266.758 125.842 266.592 125.676L244.346 97.1211H240.693L205 136.998H186.5L230.068 78.6934L199.5 40H225L225.254 40.3438L240.693 60.2656H244.512Z',
-  'M337.978 126H296.142V0H315.898V39.0137H343L339 54.4531H315.898V109.072H337.978V126Z',
-  'M455.019 39.3457H426.299C419.492 29.8828 409.697 25.4004 398.076 25.4004C377.49 25.4004 361.885 42.998 361.885 63.252C361.885 83.6719 376.826 101.934 398.076 101.934C409.033 101.934 419.16 98.2812 425.469 89.1504H454.189C443.232 113.057 424.805 125.84 398.408 125.84C363.047 125.84 337.48 97.2852 337.48 62.7539C337.48 29.2188 365.039 1.32812 398.574 1.32812C425.469 1.32812 443.896 15.1074 455.019 39.3457Z',
-  'M495.693 39.6777C519.433 39.6777 539.023 58.1055 539.023 82.0117C539.023 106.748 521.094 125.84 496.025 125.84C472.119 125.84 453.359 106.25 453.359 82.5098C453.359 58.9355 472.285 39.6777 495.693 39.6777ZM496.191 106.914C511.133 106.914 519.267 96.123 519.267 81.8457C519.267 68.2324 509.805 58.4375 496.191 58.4375C482.246 58.4375 472.949 68.7305 472.949 82.5098C472.949 96.7871 481.25 106.914 496.191 106.914Z',
-  'M539.023 82.5098C539.023 58.9355 557.617 39.6777 581.357 39.6777C590.488 39.6777 599.453 42.168 606.592 48.3105V0H625.185V125.84H606.592V116.543C599.287 122.354 590.488 125.674 581.357 125.674C557.119 125.674 539.023 106.25 539.023 82.5098ZM582.685 58.6035C569.238 58.6035 558.945 69.5605 558.945 82.8418C558.945 96.9531 569.736 106.748 583.515 106.748C596.963 106.748 605.762 95.791 605.762 83.0078C605.762 69.5605 596.465 58.6035 582.685 58.6035Z',
-  'M666.76 108.138C674.817 108.138 681.722 105.162 685.997 97.8846H706.548C699.807 115.085 686.161 126 667.418 126C643.578 126 625 107.312 625 83.3308C625 60.177 643.249 40.1654 666.596 40.1654C691.915 40.1654 709.343 60.5077 709.343 85.15C709.343 86.4731 709.179 87.7962 709.179 89.1192H644.4C645.716 101.688 654.594 108.138 666.76 108.138ZM666.596 57.6962C656.402 57.6962 647.689 63.9808 645.058 74.0693H688.956C685.668 62.9885 677.94 57.6962 666.596 57.6962Z',
-  'M775.138 110.619V126H700.166V114.092L747.517 55.3808H702.633V40H772.508V51.9077L724.17 110.619H775.138Z',
-]
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { ArrowRight, Mail, ExternalLink } from 'lucide-react'
 
 const Footer = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref)
-
-  const variants: Variants = {
-    visible: (i: number) => ({
-      translateY: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 12,
-        duration: 0.4,
-        delay: i * 0.03,
-      },
-    }),
-    hidden: { translateY: 200 },
-  }
-
   const handleNewsLetterData = (e: FormEvent) => {
     e.preventDefault()
-    const target = e.target as HTMLFormElement
-    const formData = new FormData(target)
   }
 
   return (
-    <div className='relative h-full sm:pt-14 pt-8 bg-gradient-to-r from-[#00BCD4] to-[#4CAF50] text-white'>
-      <div className='max-w-7xl px-4 mx-auto'>
-        <div className='md:flex justify-between w-full'>
-          <div>
-            <h1 className='md:text-4xl text-2xl font-semibold'>
-              Let&lsquo;s do great work together
-            </h1>
-            <div className='pt-2 pb-6 md:w-99'>
-              <p className='md:text-2xl text-xl py-4'>
-                Sign up for our newsletter*
-              </p>
-              <div className='hover-button relative bg-white flex justify-between items-center border-2 overflow-hidden border-white rounded-full text-black hover:text-white md:text-2xl'>
-                <form
-                  onSubmit={(e) => handleNewsLetterData(e)}
-                  className='relative z-2 grid grid-cols-6 w-full h-full'
+    <footer className='bg-gray-900 text-white border-t-4 border-[#00BCD4]'>
+      <div className='max-w-6xl mx-auto px-6'>
+        {/* Main Footer Content */}
+        <div className='py-16 grid grid-cols-1 lg:grid-cols-2 gap-12'>
+          {/* Newsletter Section */}
+          <div className='max-w-lg'>
+            <h2 className='text-3xl font-bold mb-4'>Stay Updated</h2>
+            <p className='text-gray-300 mb-6 leading-relaxed'>
+              Get the latest technical insights, development best practices, and
+              product updates delivered directly to your inbox.
+            </p>
+
+            <form onSubmit={handleNewsLetterData} className='space-y-4'>
+              <div className='flex gap-3'>
+                <Input
+                  type='email'
+                  name='newsletter_email'
+                  placeholder='your.email@domain.com'
+                  className='bg-gray-800 border-gray-700 text-white placeholder-gray-400 font-mono text-sm'
+                  required
+                />
+                <Button
+                  type='submit'
+                  className='bg-[#00BCD4] hover:bg-[#4CAF50] text-white px-6'
                 >
-                  <input
-                    type='email'
-                    name='newsletter_email'
-                    className='border-none bg-transparent py-3 px-6 col-span-5 placeholder-gray-600'
-                    placeholder='Your Email *'
-                  />
-                  <button
-                    type='submit'
-                    className='cursor-pointer w-full hover:bg-[#4CAF50] bg-[#00BCD4] text-white h-full cols-span-1'
-                  >
-                    <svg
-                      width='15'
-                      height='15'
-                      viewBox='0 0 15 15'
-                      fill='none'
-                      className='w-full h-[80%]'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <path
-                        d='M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z'
-                        fill='currentColor'
-                        fillRule='evenodd'
-                        clipRule='evenodd'
-                      ></path>
-                    </svg>
-                  </button>
-                </form>
+                  <ArrowRight className='h-4 w-4' />
+                </Button>
               </div>
-            </div>
+              <p className='text-xs text-gray-400 font-mono'>
+                No spam, unsubscribe anytime
+              </p>
+            </form>
           </div>
-          <div className='flex gap-10'>
-            <ul>
-              <li className='text-2xl pb-2 text-white font-semibold'>
-                SITEMAP
-              </li>
-              <li className='text-xl font-medium'>
-                <Link href='/' className='hover:underline'>
+
+          {/* Navigation Links */}
+          <div className='grid grid-cols-2 gap-8'>
+            {/* Sitemap */}
+            <div>
+              <h3 className='text-lg font-bold mb-4 text-[#00BCD4] font-mono'>
+                NAVIGATION
+              </h3>
+              <nav className='space-y-3'>
+                <Link
+                  href='/'
+                  className='block text-gray-300 hover:text-white transition-colors duration-200'
+                >
                   Home
                 </Link>
-              </li>
-              <li className='text-xl font-medium'>
-                <Link href='/about' className='hover:underline'>
-                  About us
+                <Link
+                  href='/about'
+                  className='block text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  About
                 </Link>
-              </li>
-              <li className='text-xl font-medium'>
-                <Link href='/services' className='hover:underline'>
-                  Our Services
+                <Link
+                  href='/services'
+                  className='block text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  Services
                 </Link>
-              </li>
-              <li className='text-xl font-medium'>
-                <Link href='/projects' className='hover:underline'>
-                  Projects
+                <Link
+                  href='/portfolio'
+                  className='block text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  Portfolio
                 </Link>
-              </li>
-              <li className='text-xl font-medium'>
-                <Link href='/blogs' className='hover:underline'>
-                  Blogs
+                <Link
+                  href='/blog'
+                  className='block text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  Blog
                 </Link>
-              </li>
-              <li className='text-xl font-medium'>
-                <Link href='/contact-us' className='hover:underline'>
+                <Link
+                  href='/contact'
+                  className='block text-gray-300 hover:text-white transition-colors duration-200'
+                >
                   Contact
                 </Link>
-              </li>
-            </ul>
-            <ul>
-              <li className='text-2xl pb-2 text-white font-semibold'>SOCIAL</li>
-              <li className='text-xl font-medium'>
+              </nav>
+            </div>
+
+            {/* Social & Resources */}
+            <div>
+              <h3 className='text-lg font-bold mb-4 text-[#4CAF50] font-mono'>
+                CONNECT
+              </h3>
+              <nav className='space-y-3'>
                 <a
-                  href='https://www.linkedin.com/company/next-codez/'
+                  href='https://github.com/moontag'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='hover:underline'
+                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  GitHub
+                  <ExternalLink className='ml-1 h-3 w-3' />
+                </a>
+                <a
+                  href='https://www.linkedin.com/company/moontag'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
                 >
                   LinkedIn
+                  <ExternalLink className='ml-1 h-3 w-3' />
                 </a>
-              </li>
-              <li className='text-xl font-medium'>
                 <a
-                  href='https://twitter.com/NextCodez'
+                  href='https://twitter.com/moontag'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='hover:underline'
+                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
                 >
                   Twitter
+                  <ExternalLink className='ml-1 h-3 w-3' />
                 </a>
-              </li>
-              <li className='text-xl font-medium'>
                 <a
-                  href='https://www.instagram.com/nextcodez/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='hover:underline'
+                  href='mailto:hello@moontag.com'
+                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
                 >
-                  Instagram
+                  <Mail className='mr-2 h-4 w-4' />
+                  Email Us
                 </a>
-              </li>
-              <li className='text-xl font-medium'>
-                <a
-                  href='https://www.facebook.com/nextcodezz'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='hover:underline'
-                >
-                  Facebook
-                </a>
-              </li>
-            </ul>
+              </nav>
+            </div>
           </div>
         </div>
-        <div className='border-y-2 md:py-4 border-white/20'>
-          <motion.svg
-            width='776'
-            ref={ref}
-            height='137'
-            viewBox='0 0 776 137'
-            fill='none'
-            className='sm:h-fit h-20 md:px-8 px-2 footer-logo w-full'
-            xmlns='http://www.w3.org/2000/svg'
-            initial='hidden'
-            animate={isInView ? 'visible' : 'hidden'}
-          >
-            {pathArr.map((path, index) => (
-              <motion.path
-                key={index}
-                custom={index}
-                variants={variants}
-                d={path}
-                fill='white'
-              />
-            ))}
-          </motion.svg>
-        </div>
-        <div className='flex md:flex-row flex-col-reverse gap-3 justify-between py-2 items-center'>
-          <span className='font-medium'>
-            &copy; {new Date().getFullYear()} MoonTag. All Rights Reserved.
-          </span>
-          <div className='flex items-center gap-4'>
-            <LanguageSelector />
+
+        {/* Bottom Bar */}
+        <div className='py-6 border-t border-gray-800'>
+          <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+            <div className='flex items-center gap-4'>
+              <span className='text-gray-400 font-mono text-sm'>
+                © {new Date().getFullYear()} Moontag. All rights reserved.
+              </span>
+            </div>
+
+            <div className='flex items-center gap-6'>
+              {/* Status Indicator */}
+              <div className='flex items-center gap-2 text-sm'>
+                <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
+                <span className='text-gray-400 font-mono'>
+                  All systems operational
+                </span>
+              </div>
+
+              {/* Version Info */}
+              <div className='text-xs text-gray-500 font-mono'>v2.1.0</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

@@ -1,0 +1,102 @@
+### Basic Email Test
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "email": "test@example.com"
+}
+
+###
+
+### Welcome Email - Full Parameters
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "Sarah",
+  "email": "sarah@moontag.com",
+  "subject": "Welcome to Moontag - Let's Build Something Amazing",
+  "messageType": "welcome"
+}
+
+###
+
+### Project Update Email
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "Alex",
+  "email": "alex@client.com",
+  "subject": "Your Project Update",
+  "messageType": "project-update"
+}
+
+###
+
+### Support Email
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "Marie",
+  "email": "marie@example.com",
+  "subject": "We're Here to Help",
+  "messageType": "support"
+}
+
+###
+
+### Newsletter Email
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "David",
+  "email": "david@startup.com",
+  "subject": "Moontag Monthly Newsletter",
+  "messageType": "newsletter"
+}
+
+###
+
+### API Status Check
+GET http://localhost:3000/api/send
+
+###
+
+### Test with Moontag Email Address
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "Test User",
+  "email": "moontag33@gmail.com",
+  "subject": "API Test Email",
+  "messageType": "welcome"
+}
+
+###
+
+### Error Test - Invalid Email
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "Error Test",
+  "email": "invalid-email",
+  "subject": "This Should Fail",
+  "messageType": "welcome"
+}
+
+###
+
+### Minimal Test - Only Required Fields
+POST http://localhost:3000/api/send
+Content-Type: application/json
+
+{
+  "firstName": "Minimal",
+  "email": "minimal@test.com"
+}

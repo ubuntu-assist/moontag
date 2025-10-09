@@ -1,10 +1,10 @@
-import { NextIntlClientProvider, hasLocale } from 'next-intl'
-import { notFound } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { NextIntlClientProvider } from 'next-intl'
 
-import localFont from 'next/font/local'
 import './globals.css'
 import { Metadata } from 'next'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import localFont from 'next/font/local'
 
 const brockMann = localFont({
   src: [
@@ -53,13 +53,17 @@ const brockMann = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Abokyh | Gift Cards & Crypto Credit',
+  title: 'Moontag | Digital Solutions & Creative Development',
   description:
-    'Abokyh - Seamless crypto-based gift card platform enabling affordable and secure transactions in Francophone Africa',
-  applicationName: 'Abokyh',
-  authors: [
-    { name: 'Duclair Fopa Kuete', url: '' },
-    { name: 'Loic-Yvan Ayemou', url: '' },
+    'Moontag - Innovative digital agency specializing in web development, design, and photography. We create stunning digital experiences that bring your ideas to life.',
+  applicationName: 'Moontag',
+  authors: [{ name: 'Moontag Team', url: 'https://moontag.com' }],
+  keywords: [
+    'web development',
+    'design',
+    'photography',
+    'digital agency',
+    'creative solutions',
   ],
 }
 
@@ -72,14 +76,18 @@ export default async function LocaleLayout({
 }) {
   // Ensure that the incoming `locale` is valid
   const { locale } = await params
-  if (!hasLocale(routing.locales, locale)) {
-    notFound()
-  }
+  // if (!hasLocale(routing.locales, locale)) {
+  //   notFound()
+  // }
 
   return (
     <html lang={locale}>
       <body className={`${brockMann.variable}`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   )
