@@ -1,9 +1,9 @@
 'use client'
-import React, { FormEvent } from 'react'
+import { FormEvent } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { ArrowRight, Mail, ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 
 const Footer = () => {
   const handleNewsLetterData = (e: FormEvent) => {
@@ -99,15 +99,6 @@ const Footer = () => {
               </h3>
               <nav className='space-y-3'>
                 <a
-                  href='https://github.com/moontag'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
-                >
-                  GitHub
-                  <ExternalLink className='ml-1 h-3 w-3' />
-                </a>
-                <a
                   href='https://www.linkedin.com/company/moontag'
                   target='_blank'
                   rel='noopener noreferrer'
@@ -124,13 +115,6 @@ const Footer = () => {
                 >
                   Twitter
                   <ExternalLink className='ml-1 h-3 w-3' />
-                </a>
-                <a
-                  href='mailto:hello@moontag.com'
-                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
-                >
-                  <Mail className='mr-2 h-4 w-4' />
-                  Email Us
                 </a>
               </nav>
             </div>
@@ -154,9 +138,6 @@ const Footer = () => {
                   All systems operational
                 </span>
               </div>
-
-              {/* Version Info */}
-              <div className='text-xs text-gray-500 font-mono'>v2.1.0</div>
             </div>
           </div>
         </div>

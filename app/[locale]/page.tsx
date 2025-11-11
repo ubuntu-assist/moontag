@@ -147,12 +147,6 @@ export default function Home() {
                 <Badge className='bg-[#00BCD4] text-white border-0 font-mono'>
                   Digital Solutions
                 </Badge>
-                <Badge
-                  variant='outline'
-                  className='border-gray-600 text-gray-300 font-mono'
-                >
-                  v2.1.0
-                </Badge>
               </div>
 
               <h1 className='hero-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6'>
@@ -340,7 +334,7 @@ export default function Home() {
                       ))}
                     </div>
 
-                    <Button
+                    {/* <Button
                       variant='outline'
                       className='w-full border-gray-300 text-gray-700 hover:border-[#00BCD4] hover:text-[#00BCD4] hover:bg-transparent'
                       asChild
@@ -349,7 +343,7 @@ export default function Home() {
                         Learn More
                         <ArrowRight className='ml-2 h-4 w-4' />
                       </Link>
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardContent>
               </Card>
@@ -460,8 +454,8 @@ export default function Home() {
                             item.status === 'completed'
                               ? 'bg-green-400'
                               : item.status === 'in-progress'
-                              ? 'bg-yellow-400 animate-pulse'
-                              : 'bg-gray-500'
+                                ? 'bg-yellow-400 animate-pulse'
+                                : 'bg-gray-500'
                           }`}
                         ></div>
                         <span className={`text-xs font-mono ${item.color}`}>

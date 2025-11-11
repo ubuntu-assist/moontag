@@ -72,7 +72,7 @@ const ServicesPage = () => {
         'Visual asset creation',
       ],
       callToAction: 'View Portfolio',
-      link: '/services/branding',
+      link: '/portfolio',
       category: 'Design',
     },
     {

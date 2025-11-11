@@ -79,46 +79,6 @@ const PartnerPage = () => {
 
   const partners = [
     {
-      src: '/images/partners/africa-web3-academy.png',
-      alt: 'Africa Web3 Academy',
-      name: 'Africa Web3 Academy',
-      description: 'Blockchain education and training partnership',
-      url: 'https://www.linkedin.com/company/africa-web3-academy/',
-      type: 'Education',
-    },
-    {
-      src: '/images/partners/bit-trading-edu.png',
-      alt: 'Bit Trading Edu',
-      name: 'Bit Trading Edu',
-      description: 'Financial technology education platform',
-      url: 'https://www.linkedin.com/company/bit-trading-edu/',
-      type: 'Fintech',
-    },
-    {
-      src: '/images/partners/crypto-boutique.png',
-      alt: 'Crypto Boutique',
-      name: 'Crypto Boutique',
-      description: 'E-commerce and digital payments integration',
-      url: 'https://cryptoboutique.com',
-      type: 'E-commerce',
-    },
-    {
-      src: '/images/partners/logo-tech-blockchain.png',
-      alt: 'Tech Blockchain',
-      name: 'Tech Blockchain',
-      description: 'Blockchain infrastructure and development',
-      url: 'https://www.linkedin.com/company/techblockchainaf',
-      type: 'Technology',
-    },
-    {
-      src: '/images/partners/pizza-dao.png',
-      alt: 'Pizza DAO',
-      name: 'Pizza DAO',
-      description: 'Community-driven development initiatives',
-      url: 'https://globalpizza.party/',
-      type: 'Community',
-    },
-    {
       src: '/images/partners/stellar-logo.png',
       alt: 'Stellar',
       name: 'Stellar',

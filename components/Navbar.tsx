@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Link, usePathname } from '@/i18n/navigation'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Menu, X, ExternalLink } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 
 const Navbar = () => {
@@ -46,18 +45,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className='flex items-center gap-3'>
             <Link href='/' className='flex items-center gap-3 group'>
-              <div className='relative'>
-                <Image
-                  src='/images/moontag-logo.png'
-                  alt='Logo'
-                  width={64}
-                  height={64}
-                  className='object-contain'
-                />
-              </div>
-              <Badge className='bg-[#00BCD4] text-white border-0 text-xs font-mono'>
-                v1.0
-              </Badge>
+              <Image
+                src='/images/moontag-logo.png'
+                alt='Logo'
+                width={100}
+                height={100}
+                className='object-contain'
+              />
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -90,18 +84,6 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className='hidden md:flex items-center gap-3'>
             <Button
-              variant='outline'
-              size='sm'
-              className='border-gray-300 text-gray-700 hover:border-[#00BCD4] hover:text-[#00BCD4] font-medium'
-              asChild
-            >
-              <Link href='/docs'>
-                Docs
-                <ExternalLink className='ml-1 h-3 w-3' />
-              </Link>
-            </Button>
-
-            <Button
               size='sm'
               className={`font-medium transition-all duration-200 ${
                 pathname === '/contact'
@@ -110,7 +92,7 @@ const Navbar = () => {
               }`}
               asChild
             >
-              <Link href='/contact'>Get Started</Link>
+              <Link href='/contact'>Contact Us</Link>
             </Button>
           </div>
           {/* Mobile Menu Button */}
@@ -170,18 +152,6 @@ const Navbar = () => {
             {/* Mobile CTA */}
             <div className='pt-4 mt-4 border-t border-gray-100 space-y-2'>
               <Button
-                variant='outline'
-                size='sm'
-                className='w-full border-gray-300 text-gray-700 hover:border-[#00BCD4] hover:text-[#00BCD4] font-medium'
-                asChild
-              >
-                <Link href='/docs' onClick={() => setIsMobileMenuOpen(false)}>
-                  Documentation
-                  <ExternalLink className='ml-2 h-4 w-4' />
-                </Link>
-              </Button>
-
-              <Button
                 size='sm'
                 className='w-full bg-[#00BCD4] hover:bg-[#4CAF50] text-white font-medium'
                 asChild
@@ -190,7 +160,7 @@ const Navbar = () => {
                   href='/contact'
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
+                  Contact Us
                 </Link>
               </Button>
             </div>
@@ -203,7 +173,6 @@ const Navbar = () => {
                 <div className='w-2 h-2 bg-green-400 rounded-full'></div>
                 <span>All systems operational</span>
               </div>
-              <span className='text-gray-400 font-mono'>v2.1.0</span>
             </div>
           </div>
         </div>

@@ -9,7 +9,6 @@ import {
   Code,
   CheckCircle,
   Globe,
-  Github,
   ExternalLink,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -89,23 +88,6 @@ export default function DevelopmentProjectDetails({
                     >
                       <Globe className='mr-2 h-4 w-4' />
                       View Live Site
-                    </a>
-                  </Button>
-                )}
-
-                {project.githubUrl && (
-                  <Button
-                    variant='outline'
-                    className='border-gray-300 text-gray-700 hover:border-gray-900 hover:text-gray-900'
-                    asChild
-                  >
-                    <a
-                      href={project.githubUrl}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <Github className='mr-2 h-4 w-4' />
-                      Source Code
                     </a>
                   </Button>
                 )}

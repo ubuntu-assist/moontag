@@ -2,16 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import {
-  Check,
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Send,
-  MessageCircle,
-  Terminal,
-} from 'lucide-react'
+import { Check, MapPin, Phone, Mail, Clock, Send, Terminal } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -85,25 +76,17 @@ const ContactPage = () => {
       icon: <Mail className='h-5 w-5' />,
       title: 'Email Support',
       description: 'Get in touch with our team',
-      contact: 'hello@moontag.com',
-      link: 'mailto:hello@moontag.com',
+      contact: 'contact@moontag.com',
+      link: 'mailto:contact@moontag.com',
       badge: 'Primary',
     },
     {
       icon: <Phone className='h-5 w-5' />,
       title: 'Phone Support',
       description: 'Speak directly with us',
-      contact: '+225 01 513 92626',
-      link: 'tel:+22501513922626',
+      contact: '+237 672 969 165',
+      link: 'tel:+237672969165',
       badge: 'Available',
-    },
-    {
-      icon: <MessageCircle className='h-5 w-5' />,
-      title: 'Live Chat',
-      description: 'Chat with our support team',
-      contact: 'Available 9AM - 6PM',
-      link: '#',
-      badge: 'Online',
     },
   ]
 
@@ -158,7 +141,7 @@ const ContactPage = () => {
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-16'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-16'>
             {contactMethods.map((method, index) => (
               <motion.div
                 key={index}
@@ -389,9 +372,9 @@ const ContactPage = () => {
                         Office Location
                       </h3>
                       <p className='text-gray-600'>
-                        Cocody, Riviera
+                        Foto
                         <br />
-                        Abidjan, Côte d&apos;Ivoire
+                        Dschang, Cameroon
                       </p>
                     </div>
                   </div>
@@ -451,7 +434,7 @@ const ContactPage = () => {
           <div className='bg-white rounded-lg border-2 border-gray-200 overflow-hidden'>
             <div className='h-96'>
               <iframe
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15889.656004167582!2d-3.9986410128418086!3d5.353620599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ed002900554b%3A0xa1e0572106cab326!2sCocody%20Riviera%20bonoumin!5e0!3m2!1sen!2scm!4v1753373719535!5m2!1sen!2scm'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.7240733850113!2d10.066415274714643!3d5.458780034620225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105fb10701ae4363%3A0x372895a577808504!2sMarch%C3%A9%20foto!5e0!3m2!1sfr!2scm!4v1762882467612!5m2!1sfr!2scm'
                 width='100%'
                 height='100%'
                 style={{ border: 0 }}
