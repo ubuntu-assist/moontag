@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl'
+import { Analytics } from '@vercel/analytics/next'
 
 import './globals.css'
 import { Metadata } from 'next'
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
           {children}
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
