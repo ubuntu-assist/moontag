@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { JSX, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   Check,
@@ -32,10 +32,27 @@ import {
   DialogFooter,
 } from '@/components/ui/dialog'
 
+type PartnerFormType = 'enterprise' | 'developer' | 'tech'
+
+interface PartnerType {
+  icon: JSX.Element
+  title: string
+  description: string
+  features: string[]
+  badge: string
+  formType: PartnerFormType
+}
+
 const PartnerPage = () => {
   const [showDialog, setShowDialog] = useState(false)
 
-  const partnerTypes = [
+  const TALLY_FORM_URLS = {
+    enterprise: 'https://tally.so/r/YOUR_ENTERPRISE_FORM_ID',
+    developer: 'https://tally.so/r/444oWB',
+    tech: 'https://tally.so/r/ODDvda',
+  }
+
+  const partnerTypes: PartnerType[] = [
     {
       icon: <Building2 className='h-6 w-6' />,
       title: 'Enterprise Partners',
@@ -48,6 +65,7 @@ const PartnerPage = () => {
         'White-label options',
       ],
       badge: 'Enterprise',
+      formType: 'enterprise',
     },
     {
       icon: <Code className='h-6 w-6' />,
@@ -61,6 +79,7 @@ const PartnerPage = () => {
         'Co-marketing opportunities',
       ],
       badge: 'Developer',
+      formType: 'developer',
     },
     {
       icon: <Database className='h-6 w-6' />,
@@ -74,6 +93,7 @@ const PartnerPage = () => {
         'Marketplace listings',
       ],
       badge: 'Tech',
+      formType: 'tech',
     },
   ]
 
@@ -120,6 +140,11 @@ const PartnerPage = () => {
       description: 'Expand your services across Francophone African markets',
     },
   ]
+
+  const handleApplyClick = (formType: PartnerFormType) => {
+    const url = TALLY_FORM_URLS[formType]
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
 
   return (
     <main className='bg-white min-h-screen'>
@@ -222,7 +247,7 @@ const PartnerPage = () => {
 
                     <Button
                       className='w-full bg-gray-900 hover:bg-[#00BCD4] text-white transition-colors duration-300 mt-auto'
-                      onClick={() => setShowDialog(true)}
+                      onClick={() => handleApplyClick(type.formType)}
                     >
                       Apply Now
                       <ArrowRight className='ml-2 h-4 w-4' />
