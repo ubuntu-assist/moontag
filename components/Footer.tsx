@@ -116,6 +116,15 @@ const Footer = () => {
                   Twitter
                   <ExternalLink className='ml-1 h-3 w-3' />
                 </a>
+                <a
+                  href='https://web.facebook.com/people/237moontag/61559612147197/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  Facebook
+                  <ExternalLink className='ml-1 h-3 w-3' />
+                </a>
               </nav>
             </div>
           </div>
