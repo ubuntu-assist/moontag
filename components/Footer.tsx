@@ -99,7 +99,7 @@ const Footer = () => {
               </h3>
               <nav className='space-y-3'>
                 <a
-                  href='https://www.linkedin.com/company/moontag'
+                  href='https://www.linkedin.com/in/moontag-sarl-77a623397'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='flex items-center text-gray-300 hover:text-white transition-colors duration-200'
